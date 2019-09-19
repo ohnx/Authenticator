@@ -63,7 +63,7 @@ class TokenListViewController: UITableViewController {
         label.numberOfLines = 2
         label.attributedText = noTokenString
         label.textAlignment = .center
-        label.textColor = UIColor.otpForegroundColor
+        label.textColor = UIColor(named: "foregroundColor")!
         return label
     }()
 
@@ -100,7 +100,7 @@ class TokenListViewController: UITableViewController {
         label.numberOfLines = 0
         label.attributedText = attributedMessage
         label.textAlignment = .center
-        label.textColor = UIColor.otpForegroundColor
+        label.textColor = UIColor(named: "foregroundColor")!
         return label
     }()
 
@@ -128,7 +128,7 @@ class TokenListViewController: UITableViewController {
         self.tableView.keyboardDismissMode = .interactive
 
         self.title = "Authenticator"
-        self.view.backgroundColor = UIColor.otpBackgroundColor
+        self.view.backgroundColor = UIColor(named: "backgroundColor")!
 
         // Configure table view
         self.tableView.separatorStyle = .none

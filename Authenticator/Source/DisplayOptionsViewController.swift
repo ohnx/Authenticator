@@ -47,8 +47,8 @@ final class DisplayOptionsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .otpBackgroundColor
-        view.tintColor = .otpForegroundColor
+        view.backgroundColor = UIColor(named: "backgroundColor")
+        view.tintColor = UIColor(named: "foregroundColor")
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44.0
@@ -97,10 +97,10 @@ final class DisplayOptionsViewController: UITableViewController {
         // An apparent rendering error can occur when the table view is scrolled programmatically, causing a cell
         // scrolled off of the screen to appear with a black background when scrolled back onto the screen. Setting the
         // background color of the cell to the table view's background color, instead of to `.clear`, fixes the issue.
-        cell.backgroundColor = .otpBackgroundColor
+        cell.backgroundColor = UIColor(named: "backgroundColor")
         cell.selectionStyle = .none
 
-        cell.textLabel?.textColor = .otpForegroundColor
+        cell.textLabel?.textColor = UIColor(named: "foregroundColor")
     }
 }
 
@@ -164,9 +164,9 @@ class DigitGroupingRowCell<Action>: UITableViewCell {
     }
 
     private func configureCell() {
-        backgroundColor = .otpBackgroundColor
+        backgroundColor = UIColor(named: "backgroundColor")
 
-        titleLabel.textColor = .otpForegroundColor
+        titleLabel.textColor = UIColor(named: "foregroundColor")
         titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .light)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(titleLabel)

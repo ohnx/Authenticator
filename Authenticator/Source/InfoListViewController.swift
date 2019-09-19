@@ -56,7 +56,7 @@ final class InfoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.backgroundColor = UIColor.otpBackgroundColor
+        tableView.backgroundColor = UIColor(named: "backgroundColor")!
         tableView.separatorStyle = .none
         tableView.indicatorStyle = .white
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -128,14 +128,14 @@ class InfoListCell: UITableViewCell {
     }
 
     private func configureCell() {
-        backgroundColor = .otpBackgroundColor
+        backgroundColor = UIColor(named: "backgroundColor")
 
-        titleLabel.textColor = .otpForegroundColor
+        titleLabel.textColor = UIColor(named: "foregroundColor")
         titleLabel.font = InfoListCell.titleFont
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(titleLabel)
 
-        descriptionLabel.textColor = .otpForegroundColor
+        descriptionLabel.textColor = UIColor(named: "foregroundColor")
         descriptionLabel.numberOfLines = 0
         descriptionLabel.font = InfoListCell.descriptionFont
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false

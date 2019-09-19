@@ -65,8 +65,8 @@ final class TokenFormViewController<Form: TableViewModelRepresentable>: UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .otpBackgroundColor
-        view.tintColor = .otpForegroundColor
+        view.backgroundColor = UIColor(named: "backgroundColor")
+        view.tintColor = UIColor(named: "foregroundColor")
         tableView.separatorStyle = .none
 
         // Set up top bar
@@ -159,13 +159,13 @@ final class TokenFormViewController<Form: TableViewModelRepresentable>: UITableV
         // An apparent rendering error can occur when the table view is scrolled programmatically, causing a cell
         // scrolled off of the screen to appear with a black background when scrolled back onto the screen. Setting the
         // background color of the cell to the table view's background color, instead of to `.clear`, fixes the issue.
-        cell.backgroundColor = .otpBackgroundColor
+        cell.backgroundColor = UIColor(named: "backgroundColor")
         cell.selectionStyle = .none
 
-        cell.textLabel?.textColor = .otpForegroundColor
+        cell.textLabel?.textColor = UIColor(named: "foregroundColor")
         if let cell = cell as? TextFieldRowCell<Form.Action> {
-            cell.textField.backgroundColor = .otpLightColor
-            cell.textField.tintColor = .otpDarkColor
+            cell.textField.backgroundColor = UIColor(named: "backgroundColor")
+            cell.textField.tintColor = UIColor(named: "foregroundColor")
             cell.delegate = self
         }
     }

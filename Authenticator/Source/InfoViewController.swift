@@ -71,7 +71,7 @@ final class InfoViewController: UIViewController, WKNavigationDelegate {
 
         applyViewModel()
 
-        view.backgroundColor = UIColor.otpBackgroundColor
+        view.backgroundColor = UIColor(named: "backgroundColor")
         // Prevent a flash of white before WebKit fully loads the HTML content.
         webView.isOpaque = false
         // Force the scroll indicators to be white.

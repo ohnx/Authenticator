@@ -51,7 +51,7 @@ final class TokenScannerViewController: UIViewController, QRScannerDelegate {
         label.numberOfLines = 0
         label.attributedText = attributedMessage
         label.textAlignment = .center
-        label.textColor = UIColor.otpForegroundColor
+        label.textColor = UIColor(named: "foregroundColor")!
         return label
     }()
 

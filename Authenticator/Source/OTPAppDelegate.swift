@@ -41,12 +41,12 @@ class OTPAppDelegate: UIResponder, UIApplicationDelegate {
 
         let disabledAttributes: [NSAttributedStringKey: Any] = [
             .font: barButtonItemFont,
-            .foregroundColor: UIColor.otpBarForegroundColor.withAlphaComponent(0.3),
+            .foregroundColor: UIColor(named: "foregroundColor")!.withAlphaComponent(0.3),
         ]
         UIBarButtonItem.appearance().setTitleTextAttributes(disabledAttributes, for: .disabled)
 
         // Restore white-on-black style
-        SVProgressHUD.setForegroundColor(.otpLightColor)
+        SVProgressHUD.setForegroundColor(UIColor(named: "foregroundColor")!)
         SVProgressHUD.setBackgroundColor(UIColor(white: 0, alpha: 0.95))
         SVProgressHUD.setMinimumDismissTimeInterval(1)
 

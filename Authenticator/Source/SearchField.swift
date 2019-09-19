@@ -56,16 +56,16 @@ class SearchField: UIView {
     let textField: UITextField = SearchTextField()
 
     private func setupTextField() {
-        ring.tintColor = UIColor.otpLightColor
+        ring.tintColor = UIColor(named: "foregroundColor")
         textField.attributedPlaceholder = NSAttributedString(
             string: "Authenticator",
             attributes: [
-                .foregroundColor: UIColor.otpLightColor,
+                .foregroundColor: UIColor(named: "foregroundColor")!,
                 .font: UIFont.systemFont(ofSize: 16, weight: .light),
             ]
         )
-        textField.textColor = UIColor.otpLightColor
-        textField.backgroundColor = UIColor.otpLightColor.withAlphaComponent(0.2)
+        textField.textColor = UIColor(named: "foregroundColor")
+        textField.backgroundColor = UIColor(named: "backgroundColor")!.withAlphaComponent(0.2)
         textField.leftView = ring
         textField.leftViewMode = .always
         textField.borderStyle = .roundedRect
@@ -111,7 +111,7 @@ extension SearchField {
         textField.isEnabled = viewModel.hasTokens
         textField.borderStyle = viewModel.hasTokens ? .roundedRect : .none
         textField.backgroundColor = viewModel.hasTokens ?
-            UIColor.otpLightColor.withAlphaComponent(0.1) : UIColor.clear
+            UIColor(named: "backgroundColor")!.withAlphaComponent(0.1) : UIColor.clear
     }
 }
 

@@ -30,21 +30,21 @@ class OpaqueNavigationController: UINavigationController {
         super.viewDidLoad()
 
         navigationBar.isTranslucent = false
-        navigationBar.barTintColor = UIColor.otpBarBackgroundColor
-        navigationBar.tintColor = UIColor.otpBarForegroundColor
+        navigationBar.barTintColor = UIColor(named: "backgroundColor")
+        navigationBar.tintColor = UIColor(named: "foregroundColor")
         navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor.otpBarForegroundColor,
+            .foregroundColor: UIColor(named: "foregroundColor")!,
             .font: UIFont.systemFont(ofSize: 20, weight: .light),
         ]
 
         toolbar.isTranslucent = false
-        toolbar.barTintColor = UIColor.otpBarBackgroundColor
-        toolbar.tintColor = UIColor.otpBarForegroundColor
+        toolbar.barTintColor = UIColor(named: "backgroundColor")
+        toolbar.tintColor = UIColor(named: "foregroundColor")
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    //override var preferredStatusBarStyle: UIStatusBarStyle {
+        //return .lightContent
+    //}
 }
 
 class RootViewController: OpaqueNavigationController {

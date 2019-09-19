@@ -3,8 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            background-color: rgb(35, 35, 50);
-            color: rgb(250, 248, 240);
+            background-color: rgb(250, 248, 240);
+            color: rgb(35, 35, 50);
             font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande";
             margin: 10px 20px 20px 20px;
         }
@@ -18,7 +18,16 @@
             line-height: 1.5;
         }
         a {
-            color: rgb(250, 248, 240);
+            color: rgb(35, 35, 50);
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: rgb(35, 35, 50);
+                color: rgb(250, 248, 240);
+            }
+            a {
+                color: rgb(250, 248, 240);
+            }
         }
     </style>
 </head>

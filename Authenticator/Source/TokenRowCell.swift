@@ -46,7 +46,7 @@ class TokenRowCell: UITableViewCell {
     }
 
     private func configureCell() {
-        backgroundColor = .otpBackgroundColor
+        backgroundColor = UIColor(named: "backgroundColor")
         selectionStyle = .none
 
         configureSubviews()
@@ -57,16 +57,16 @@ class TokenRowCell: UITableViewCell {
 
     private func configureSubviews() {
         titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        titleLabel.textColor = .otpForegroundColor
+        titleLabel.textColor = UIColor(named: "foregroundColor")
         titleLabel.textAlignment = .center
         contentView.addSubview(titleLabel)
 
         passwordLabel.font = UIFont.systemFont(ofSize: 50, weight: .thin)
-        passwordLabel.textColor = .otpForegroundColor
+        passwordLabel.textColor = UIColor(named: "foregroundColor")
         passwordLabel.textAlignment = .center
         contentView.addSubview(passwordLabel)
 
-        nextPasswordButton.tintColor = .otpForegroundColor
+        nextPasswordButton.tintColor = UIColor(named: "foregroundColor")
         nextPasswordButton.addTarget(self, action: #selector(TokenRowCell.generateNextPassword), for: .touchUpInside)
         nextPasswordButton.accessibilityLabel = "Increment token"
         nextPasswordButton.accessibilityHint = "Double-tap to generate a new password."
